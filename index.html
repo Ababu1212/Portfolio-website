@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abraham Abunu | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e3a8a'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors">
+
+  <!-- Dark Mode Toggle -->
+  <div class="fixed top-4 right-4">
+    <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 rounded bg-gray-200 dark:bg-gray-700">
+      🌓
+    </button>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center p-4" id="home">
+    <img src="assets/ab.jpg" alt="Abraham Abunu" class="w-40 h-40 rounded-full shadow-lg mb-6" />
+    <h1 class="text-4xl md:text-5xl font-bold mb-2">Abraham Abunu</h1>
+    <p class="text-xl md:text-2xl text-primary dark:text-blue-300">Software Engineering Student</p>
+    <p class="mt-4 max-w-xl">I'm a strong and dedicated individual passionate about building educational apps, creating content for Ethiopian students, and solving challenging problems through mathematics and technology.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 bg-gray-100 dark:bg-gray-800" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
+      <p class="leading-relaxed">As a Software Engineering student at Bahir Dar University, I am committed to improving education using technology. I create math-focused learning content, including YouTube videos and an exam app designed for Ethiopian university students. I’m passionate about logical problem solving and have a strong foundation in mathematics and applied sciences.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-6" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold">Exam App</h3>
+          <p class="mt-2">A math-focused exam app built to help Ethiopian students practice university-level questions efficiently.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold">Content Creation</h3>
+          <p class="mt-2">Creator of educational content covering Discrete Mathematics, Probability, and more on platforms like YouTube and Telegram.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 bg-gray-100 dark:bg-gray-800" data-aos="fade-up">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact</h2>
+      <p class="mb-2">📧 Email: <a href="mailto:your@email.com" class="text-blue-600 dark:text-blue-400">your@email.com</a></p>
+      <p class="mb-2">🔗 GitHub: <a href="https://github.com/yourusername" class="text-blue-600 dark:text-blue-400">yourusername</a></p>
+      <p>🔗 LinkedIn: <a href="https://linkedin.com/in/yourprofile" class="text-blue-600 dark:text-blue-400">yourprofile</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 text-sm text-gray-500 dark:text-gray-400">
+    © 2025 Abraham Abunu. All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
