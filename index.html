@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abraham Abunu | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -19,64 +18,101 @@
     }
   </script>
 </head>
-<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors">
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
 
-  <!-- Dark Mode Toggle -->
-  <div class="fixed top-4 right-4">
-    <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 rounded bg-gray-200 dark:bg-gray-700">
-      🌓
-    </button>
-  </div>
+  <!-- Header -->
+  <header class="flex justify-between items-center px-6 py-4 shadow-md bg-white dark:bg-gray-800 sticky top-0 z-50">
+    <h1 class="text-2xl font-bold">Abraham Abunu</h1>
+    <nav class="space-x-4">
+      <a href="#skills" class="hover:underline">Skills</a>
+      <a href="#projects" class="hover:underline">Projects</a>
+      <a href="#testimonials" class="hover:underline">Testimonials</a>
+      <a href="#blog" class="hover:underline">Blog</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </nav>
+    <button onclick="document.documentElement.classList.toggle('dark')" class="ml-4">🌓</button>
+  </header>
 
-  <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col items-center justify-center text-center p-4" id="home">
-    <img src="assets/ab.jpg" alt="Abraham Abunu" class="w-40 h-40 rounded-full shadow-lg mb-6" />
-    <h1 class="text-4xl md:text-5xl font-bold mb-2">Abraham Abunu</h1>
-    <p class="text-xl md:text-2xl text-primary dark:text-blue-300">Software Engineering Student</p>
-    <p class="mt-4 max-w-xl">I'm a strong and dedicated individual passionate about building educational apps, creating content for Ethiopian students, and solving challenging problems through mathematics and technology.</p>
-  </section>
+  <!-- Article Section with Aside -->
+  <article class="grid md:grid-cols-3 gap-4 p-6">
+    <!-- Aside: About Me -->
+    <aside class="md:col-span-1 bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
+      <img src="assets/ab.jpg" alt="Profile" class="w-32 h-32 rounded-full mx-auto mb-4">
+      <h2 class="text-xl font-semibold text-center mb-2">About Me</h2>
+      <p class="text-sm text-center">Software Engineering student passionate about education, problem-solving, and technology.</p>
+      <p class="mt-4 text-sm">Phone: +251-9xxxxxxx</p>
+      <p class="text-sm">Email: your@email.com</p>
+    </aside>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 px-6 bg-gray-100 dark:bg-gray-800" data-aos="fade-up">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
-      <p class="leading-relaxed">As a Software Engineering student at Bahir Dar University, I am committed to improving education using technology. I create math-focused learning content, including YouTube videos and an exam app designed for Ethiopian university students. I’m passionate about logical problem solving and have a strong foundation in mathematics and applied sciences.</p>
+    <!-- Main Dynamic Content Area -->
+    <div class="md:col-span-2 space-y-12">
+      <!-- Skills & Achievements -->
+      <section id="skills">
+        <h2 class="text-2xl font-bold mb-4">Skills & Achievements</h2>
+        <ul class="list-disc pl-6">
+          <li>HTML, CSS, JavaScript, Tailwind</li>
+          <li>Git, GitHub, MySQL, Node.js</li>
+          <li>Problem Solving, Content Creation</li>
+          <li>Top grade in Grade 12 Entrance Exam (2022)</li>
+        </ul>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h2 class="text-2xl font-bold mb-4">Projects</h2>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="p-4 bg-white dark:bg-gray-700 rounded shadow">
+            <h3 class="font-semibold">Exam App</h3>
+            <p>Math-focused app for Ethiopian university students.</p>
+          </div>
+          <div class="p-4 bg-white dark:bg-gray-700 rounded shadow">
+            <h3 class="font-semibold">Frontend Clone</h3>
+            <p>Work-like responsive web page built with Tailwind CSS.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </article>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="p-6 bg-gray-100 dark:bg-gray-800">
+    <h2 class="text-2xl font-bold mb-4 text-center">Testimonials</h2>
+    <div class="max-w-3xl mx-auto space-y-4">
+      <blockquote class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+        “Abraham is a dedicated learner who turns ideas into real projects.” — Peer
+      </blockquote>
+      <blockquote class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+        “His exam app has helped hundreds of students.” — Mentor
+      </blockquote>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 px-6" data-aos="fade-up">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold">Exam App</h3>
-          <p class="mt-2">A math-focused exam app built to help Ethiopian students practice university-level questions efficiently.</p>
-        </div>
-        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold">Content Creation</h3>
-          <p class="mt-2">Creator of educational content covering Discrete Mathematics, Probability, and more on platforms like YouTube and Telegram.</p>
-        </div>
-      </div>
+  <!-- Blog Section -->
+  <section id="blog" class="p-6">
+    <h2 class="text-2xl font-bold mb-4 text-center">Blog</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      <article class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+        <h3 class="font-semibold mb-2">Why I Built an Exam App</h3>
+        <p class="text-sm">A story about creating my first educational tool.</p>
+      </article>
+      <article class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+        <h3 class="font-semibold mb-2">Learning Frontend Development</h3>
+        <p class="text-sm">How I became confident with HTML, CSS, and JavaScript.</p>
+      </article>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 px-6 bg-gray-100 dark:bg-gray-800" data-aos="fade-up">
-    <div class="max-w-xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Contact</h2>
-      <p class="mb-2">📧 Email: <a href="mailto:your@email.com" class="text-blue-600 dark:text-blue-400">your@email.com</a></p>
-      <p class="mb-2">🔗 GitHub: <a href="https://github.com/yourusername" class="text-blue-600 dark:text-blue-400">yourusername</a></p>
-      <p>🔗 LinkedIn: <a href="https://linkedin.com/in/yourprofile" class="text-blue-600 dark:text-blue-400">yourprofile</a></p>
-    </div>
+  <section id="contact" class="p-6 bg-gray-100 dark:bg-gray-800 text-center">
+    <h2 class="text-2xl font-bold mb-4">Contact</h2>
+    <p>Email: <a href="mailto:your@email.com" class="text-blue-600 dark:text-blue-400">your@email.com</a></p>
+    <p>GitHub: <a href="https://github.com/yourusername" class="text-blue-600 dark:text-blue-400">yourusername</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" class="text-blue-600 dark:text-blue-400">yourprofile</a></p>
   </section>
 
-  <!-- Footer -->
   <footer class="text-center py-4 text-sm text-gray-500 dark:text-gray-400">
     © 2025 Abraham Abunu. All rights reserved.
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
 </body>
-  </html>
+</html>
